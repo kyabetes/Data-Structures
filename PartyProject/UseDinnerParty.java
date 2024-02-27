@@ -14,8 +14,8 @@ public class UseDinnerParty {
 
         // For the dinner party
         System.out.print("Enter number of guests for the dinner party >> ");
-        guests = scanner.nextInt();
-        dinnerParty.setGuests(guests);
+        int guests2 = scanner.nextInt();
+        dinnerParty.setGuests(guests2);
 
         System.out.print("Enter the menu option -- 1 for chicken or 2 for Vegi >> ");
         int choice = scanner.nextInt();
@@ -24,5 +24,10 @@ public class UseDinnerParty {
         System.out.println("The dinner party has " + dinnerParty.getGuests() + " guests");
         System.out.println("Menu option " + dinnerParty.getDinnerChoice() + " will be served");
         dinnerParty.displayInvitation();
+
+        // New feature: Collect ratings and display average
+        dinnerParty.collectRatings();
+        double averageRating = dinnerParty.calculateAverageRating();
+        System.out.println("Average rating for the dinner party: " + averageRating);
     }
 }
