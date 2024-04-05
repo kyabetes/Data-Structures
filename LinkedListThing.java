@@ -75,7 +75,7 @@ class LinkedList {
     }
 }
 
-public class Main {
+public class LinkedListThing {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.head = new Node(1);
